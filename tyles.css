@@ -1,0 +1,70 @@
+body {
+    background-color: #ffeb3b; /* Bright yellow background */
+    font-family: 'Arial', sans-serif; /* Basic font style */
+    text-align: center; /* Center text */
+    padding: 50px; /* Add padding */
+    color: #333; /* Dark text color */
+}
+
+.container {
+    max-width: 600px; /* Limit width */
+    margin: 0 auto; /* Center the container */
+    border-radius: 15px; /* Rounded corners */
+    background-color: white; /* White background for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+}
+
+h1 {
+    font-size: 2.5rem; /* Large heading */
+}
+
+p {
+    font-size: 1.2rem; /* Slightly larger paragraph */
+}
+
+button {
+    background-color: #ff4081; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px 20px; /* Padding inside button */
+    font-size: 1rem; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #f50057; /* Darker shade on hover */
+}
+
+#confetti {
+    position: absolute; /* Positioning for confetti */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    pointer-events: none; /* Prevent interaction */
+    display: none; /* Initially hidden */
+}
+
+.particle {
+    position: absolute;
+    width: 10px; /* Width of confetti particles */
+    height: 10px; /* Height of confetti particles */
+    border-radius: 50%; /* Make particles round */
+    pointer-events: none; /* Prevent interaction */
+    opacity: 0; /* Start invisible */
+    animation: fall linear forwards; /* Use fall animation */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Fall to the bottom of the screen */
+        opacity: 0;
+    }
+}
